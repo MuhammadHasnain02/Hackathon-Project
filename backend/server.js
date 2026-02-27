@@ -11,7 +11,9 @@ dotenv.config();
 const app = express();
 
 // Enable CORS for cross-origin requests
-app.use(cors());
+// app.use(cors());
+
+app.use(cors({ origin: "*" }));
 
 // Parse incoming JSON request bodies
 app.use(express.json());
